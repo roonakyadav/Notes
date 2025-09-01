@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Character encoding: UTF-8 allows almost all characters (English + symbols + emojis + other languages) -->
+  <meta charset="UTF-8">
+
+  <!-- Responsive design: makes the page adjust to mobile/desktop screen sizes -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Description of page (important for SEO and when link is shared) -->
+  <meta name="description" content="Ultimate HTML Playground with every tag">
+
+  <!-- Auto-refresh page every 60 seconds -->
+  <meta http-equiv="refresh" content="60">
+
+  <!-- Open Graph meta tag: sets title when shared on social media -->
+  <meta property="og:title" content="HTML Playground">
+
+  <!-- Page title (appears in browser tab) -->
+  <title>HTML Everything Playground</title>
+
+  <!-- Base URL for all relative links ( "/" = root ). 
+       target="_blank" means links will open in new tab by default -->
+  <base href="/" target="_blank">
+
+  <!-- Favicon (small icon in browser tab) -->
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Web app manifest (for Progressive Web Apps: icons, theme, etc.) -->
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- External CSS file -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- External JavaScript file 
+       'defer' = script loads in parallel but runs after HTML is parsed -->
+  <script src="script.js" defer></script>
+</head>
+
+
+<body>
+  <!-- Header section of the page -->
+  <header>
+    <!-- Main title of the page -->
+    <h1>Portfolio</h1>
+
+    <!-- Navigation bar: contains important links for the site -->
+    <nav>
+      <!-- Unordered list to organize navigation items -->
+      <ul>
+        <!-- Each list item (<li>) contains a link (<a>) -->
+        <li>
+          <!-- Anchor tag (<a>) that points to Instagram -->
+          <a href="https://www.instagram.com/">Instagram</a>
+        </li>
+        <li>
+          <!-- Anchor tag (<a>) that points to Linkedin -->
+          <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin">Linkedin</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</body>
+
+<main>
+  <section>
+    <h2>Who am I</h2>
+    <ul>
+      <!-- Bold -->
+      <li><b>Ronak</b></li>
+
+      <!-- Strong emphasis -->
+      <li><strong>Yadav</strong></li>
+
+      <!-- Italic -->
+      <li><i>I am</i></li>
+
+      <!-- Emphasized -->
+      <li><em>17</em></li>
+
+      <!-- Underlined -->
+      <li><u>years</u></li>
+
+      <!-- Strikethrough -->
+      <li><s>old</s></li>
+
+      <!-- Deleted text -->
+      <li><del>Touria</del></li>
+
+      <!-- Inserted text -->
+      <li><ins>inserted</ins></li>
+
+      <!-- Highlighted -->
+      <li><mark>highlighted</mark></li>
+
+      <!-- Bi-directional isolation -->
+      <li>Bidirectional: <bdi>abc</bdi></li>
+
+      <!-- Bi-directional override -->
+      <li><bdo dir="ltr">def</bdo></li>
+
+      <!-- Abbreviation -->
+      <li><abbr title="HyperText Markup Language">HTML</abbr></li>
+
+      <!-- Definition term -->
+      <li><dfn>Definition Term</dfn></li>
+
+      <!-- Citation -->
+      <li><cite>Citation</cite></li>
+
+      <!-- Quotation -->
+      <li><q>Quote</q></li>
+
+      <!-- Inline code -->
+      <li><code>console.log("hi")</code></li>
+
+      <!-- Keyboard input -->
+      <li><kbd>Ctrl+C</kbd></li>
+
+      <!-- Sample output -->
+      <li><samp>Sample Output</samp></li>
+
+      <!-- Variable -->
+      <li><var>x</var></li>
+
+      <!-- Small text -->
+      <li><small>small text</small></li>
+
+      <!-- Superscript -->
+      <li>X<sup>2</sup></li>
+
+      <!-- Subscript -->
+      <li>H<sub>2</sub>O</li>
+
+      <!-- Date and time -->
+      <li><time datetime="2025-08-29">Aug 29 2025</time></li>
+
+      <!-- Instead of <tt> -->
+      <li><code style="font-family: monospace;">teletype</code></li>
+
+      <!-- Instead of <big> -->
+      <li><span style="font-size: larger;">big text</span></li>
+
+      <!-- Abbreviation (displays "WWW" with tooltip "World Wide Web") -->
+      <abbr title="World Wide Web">WWW</abbr>
+
+      <!-- Ruby annotation -->
+      <li>
+        <ruby>
+          漢 <rt>Kan</rt>
+          <rp>(</rp>
+          <rt>ji</rt>
+          <rp>)</rp>
+        </ruby>
+      </li>
+    </ul>
+  </section>
+
+
+  <section>
+    <h2>Lists</h2>
+    <ul>
+      <li>Unordered</li>
+      <li>List</li>
+    </ul>
+    <ol>
+      <li>Ordered</li>
+      <li>List</li>
+    </ol>
+    <!-- Description List -->
+    <dl>
+      <!-- dt = description term (the thing being defined) -->
+      <dt>Term</dt>
+
+      <!-- dd = description definition (the explanation of the term) -->
+      <dd>Definition</dd>
+    </dl>
+
+  </section>
+
+  <section>
+    <h2>Forms</h2>
+    <form>
+      <fieldset>
+        <!-- fieldset = groups related form inputs together with a border -->
+
+        <legend>User Info</legend>
+        <!-- legend: Defines a title or caption for a group of form elements inside a <fieldset>. -->
+
+        <label for="name">Name:</label>
+        <!-- label: Defines a caption for a single form input. Clicking the label focuses/selects the input. -->
+        <input id="name" type="text"><br>
+
+        <!-- for: Used in <label> to link the label to an input field. The value must match the input’s id. -->
+        <!-- This makes forms more accessible (screen readers, easier clicks). -->
+        <!-- Clicking the label automatically focuses the input. -->
+        <label for="email">Email:</label>
+        <!-- id: Gives a unique identifier to an element so it can be targeted by CSS, JavaScript, or labels. -->
+        <input id="email" type="email"><br>
+
+        <label for="hours">Hours you study daily?</label>
+        <input type="number" min="1" max="10"><br>
+        <!-- br: Inserts a line break. Moves the following content to the next line. 
+          ⚠️ Should only be used for line breaks in text, NOT for layout (use CSS for spacing). -->
+
+        <label for="dob">Date of birth</label>
+        <input type="date"><br>
+
+        <label for="color">Your favourite color?</label>
+        <input type="color"><br>
+
+        <label for="Your documents">Your documents:</label>
+        <input type="file"><br>
+
+        <label for="password">Password</label>
+        <input type="password"><br>
+
+        <input type="checkbox"> Are you indian?<br>
+
+        <textarea placeholder="Your thoughts"></textarea><br>
+
+        <form>
+          <!-- ================= RADIO BUTTONS ================= -->
+          <!-- input: Creates a form input field -->
+          <!-- type="radio": Makes this input a radio button -->
+          <!-- name="r": Groups radio buttons together. 
+            🔑 Users can select only ONE option from a group of radio buttons with the same name attribute.
+            Example: If you have 3 radio buttons with name="r", selecting one will unselect the others. -->
+
+          <!-- First radio button -->
+          <input type="radio" name="r" id="opt1">
+          <!-- label: Connects text to the input using "for" (clicking the text selects the radio button) -->
+          <label for="opt1">Male</label>
+
+          <!-- Second radio button -->
+          <input type="radio" name="r" id="opt2">
+          <label for="opt2">Female</label><br>
+
+
+          <!-- ================= DROPDOWN LIST ================= -->
+          <!-- select: Creates a dropdown menu where the user can choose one item -->
+          <form>
+            <!-- label: Describes the dropdown (connects to select using for + id) -->
+            <label for="players">Choose your favorite player:</label>
+
+            <!-- select: Creates a dropdown menu -->
+            <!-- id="players": Unique identifier for linking with label -->
+            <select id="players">
+
+              <!-- option: Placeholder option -->
+              <!-- value="": No value (empty) -->
+              <!-- disabled: User cannot choose this option -->
+              <!-- selected: This option is shown by default when nothing is selected -->
+              <option value="" disabled selected>Your fav player</option>
+
+              <!-- optgroup: Groups related dropdown options under a heading -->
+              <!-- label="Goats": Title of this group -->
+              <optgroup label="Goats">
+                <!-- option: Defines a single selectable item inside the dropdown -->
+                <option>Messi</option>
+                <option>Neymar</option>
+              </optgroup>
+
+              <!-- optgroup: Another group of related dropdown options -->
+              <!-- label="Youngsters": Title of this group -->
+              <optgroup label="Youngsters">
+                <option>Yamal</option>
+                <option>Pedri</option>
+              </optgroup>
+
+            </select>
+          </form>
+
+        </form>
+
+
+
+        <form>
+          <!-- ================= DATALIST ================= -->
+          <!-- datalist: Defines a list of predefined suggestions for an input field.
+            id="options": Gives a unique identifier so it can be linked with input (list="options"). -->
+          <datalist id="options">
+            <!-- option: Defines a single suggestion value. 
+              Users can still type freely, but these show up as autocomplete hints. -->
+            <option value="Alpha">
+            <option value="Beta">
+          </datalist>
+
+          <!-- input: A text input field. 
+            list="options": Connects this input to the datalist with id="options".
+            ✅ As the user types, suggestions (Alpha, Beta) appear. -->
+          <input list="options"><br>
+
+
+          <!-- ================= OUTPUT ================= -->
+          <!-- output: Displays the result of a calculation or user action.
+            for="name email": Intended to reference input IDs that influence this output 
+            (not always supported in browsers).
+            ⚠️ Note: <output> doesn’t calculate automatically. 
+            It is mostly useful when paired with JavaScript or form calculations. -->
+          <output for="name email">Output here</output>
+        </form>
+
+
+      </fieldset>
+      <form>
+        <!-- ================= SUBMIT BUTTON ================= -->
+        <!-- button: A container element (has opening and closing tag).
+          type="submit": Makes this button submit the form.
+          Text (or HTML/icons) is written between <button> ... </button>. -->
+        <button type="submit">Submit</button>
+
+
+        <!-- ================= RESET BUTTON ================= -->
+        <!-- input: A self-closing element (no closing tag).
+          type="reset": Creates a reset button that clears all form fields.
+          value="Reset": Defines the text shown on the button (since <input> can't contain inner text). -->
+        <input type="reset" value="Reset">
+      </form>
+  </section>
+
+  <section>
+    <h2>Media</h2>
+
+
+    <!-- ================= SIMPLE IMAGE ================= -->
+    <!-- img: Displays a single image. 
+      src="...": Path or URL to the image.
+      alt="...": Text description (for screen readers, SEO, and shown if image fails). -->
+    <!-- ================= RESPONSIVE IMAGE EXAMPLE ================= -->
+    <picture>
+      <!-- source: Defines an image candidate for specific conditions. -->
+      <!-- media="(min-width: 1200px)": Use this source ONLY if screen width ≥ 1200px. -->
+      <!-- srcset="mcgregor.png": Image file to load when condition matches. -->
+      <source media="(min-width: 1200px)" srcset="mcgregor.png">
+
+      <!-- media="(min-width: 800px)": This applies if screen width ≥ 800px but <1200px. -->
+      <!-- srcset="mcgreg.png": Medium-sized image for tablets/laptops. -->
+      <source media="(min-width: 800px)" srcset="mcgreg.png">
+
+      <!-- fallback img: This will be used if no <source> conditions are met. -->
+      <!-- Example: On smaller screens (<800px), "mcg.png" will load. -->
+      <img src="mcg.png" alt="Responsive McGregor Image">
+    </picture>
+
+    <!-- AUDIO element with captions -->
+    <audio controls>
+      <!-- controls: shows play, pause, volume buttons -->
+      <source src="audio.mp3" type="audio/mpeg">
+      <!-- source: actual audio file and MIME type -->
+      <track kind="captions" src="audio.vtt" srclang="en" label="English">
+      <!-- track: adds text captions. 
+       kind="captions" → spoken content/subtitles
+       src="audio.vtt" → file containing captions (WebVTT format)
+       srclang="en" → language is English
+       label="English" → displayed name for captions -->
+    </audio>
+
+    <!-- VIDEO element with subtitles -->
+    <video controls width="200">
+      <!-- width=200 → sets width to 200px -->
+      <source src="video.mp4" type="video/mp4">
+      <!-- source: actual video file -->
+      <track kind="subtitles" src="subs.vtt" srclang="en" label="English">
+      <!-- track: adds subtitles. 
+       kind="subtitles" → translations or dialogues -->
+    </video>
+
+    <!-- IMAGE MAP (defining clickable area in an image) -->
+    <map name="map">
+      <area shape="rect" coords="34,44,270,350" href="#" alt="Area">
+      <!-- area: clickable region 
+       shape="rect" → rectangle
+       coords="34,44,270,350" → top-left and bottom-right coordinates
+       href="#" → link to go when clicked
+       alt="Area" → accessibility description -->
+    </map>
+
+    <!-- OBJECT element (older way to embed external content) -->
+    <object data="movie.swf" type="application/x-shockwave-flash" width="200" height="200">
+      <param name="autoplay" value="true">
+      <!-- param: passes parameters to embedded content (here, autoplay) -->
+    </object>
+
+    <!-- EMBED element (simpler embedding) -->
+    <embed src="embed.mp4" width="200" height="200">
+    <!-- used to embed multimedia or plugins -->
+
+    <!-- IFRAME with external source -->
+    <iframe src="https://example.com"></iframe>
+    <!-- embeds another web page inside current page -->
+
+    <!-- IFRAME with inline HTML -->
+    <iframe srcdoc="<p>Hello from srcdoc!</p>"></iframe>
+    <!-- srcdoc: allows you to embed HTML content directly into the iframe -->
+
+    <!-- SVG graphic (vector-based) -->
+    <svg width="100" height="100">
+      <circle cx="50" cy="50" r="40" stroke="black" fill="red" />
+      <!-- circle: draws a circle
+       cx, cy → center position
+       r → radius
+       stroke="black" → border color
+       fill="red" → inside color -->
+    </svg>
+
+    <!-- CANVAS element (for drawing via JavaScript) -->
+    <canvas id="canvas" width="100" height="100"></canvas>
+    <!-- blank area that can be drawn on using JS -->
+
+  </section>
+
+  <section>
+    <h2>Tables</h2>
+
+    <!-- Table with border -->
+    <table border="1">
+
+      <!-- Caption: title/heading for the table -->
+      <caption>Sample Table</caption>
+
+      <!-- Colgroup: formatting columns -->
+      <colgroup>
+        <col span="2" style="background: #eee">
+        <!-- span="2" → applies to 2 columns
+           style="background: #eee" → light grey background -->
+      </colgroup>
+
+      <!-- Thead: table header section -->
+      <thead>
+        <tr>
+          <th>Head1</th>
+          <th>Head2</th>
+        </tr>
+      </thead>
+
+      <!-- Tbody: main body section -->
+      <tbody>
+        <tr>
+          <td>Cell1</td>
+          <td>Cell2</td>
+        </tr>
+      </tbody>
+
+      <!-- Tfoot: footer section -->
+      <tfoot>
+        <tr>
+          <td>Foot1</td>
+          <td>Foot2</td>
+        </tr>
+      </tfoot>
+
+    </table>
+  </section>
+
+
+  <section>
+    <h2>Interactive Elements</h2>
+
+    <!-- Details + Summary = collapsible/expandable element -->
+    <details>
+      <summary>Click me</summary>
+      <p>Hidden content.</p>
+    </details>
+
+    <!-- Dialog box (like a popup) -->
+    <dialog open>This is a dialog</dialog>
+
+    <!-- Progress bar (shows completion %) -->
+    <progress value="70" max="100"></progress>
+
+    <!-- Meter (shows a measurement within a known range) -->
+    <meter value="0.6">60%</meter>
+  </section>
+
+
+  <section>
+    <h2>Web Components</h2>
+
+    <!-- Template element: hidden until used via JS -->
+    <template id="tpl">
+      <p>This is inside template</p>
+    </template>
+
+    <!-- Shadow DOM host: a container where shadow DOM will be attached -->
+    <div id="shadow-host"></div>
+
+    <!-- Slot: placeholder where external content can be inserted -->
+    <slot name="slot-example">Default Slot Content</slot>
+  </section>
+
+
+  <section>
+    <h2>Deprecated Museum</h2>
+
+    <!-- <marquee>: Deprecated tag, makes text scroll horizontally/vertically -->
+    <marquee>Scrolling text</marquee>
+  </section>
+
+</main>
+
+<footer>
+  <!-- &copy; = copyright symbol -->
+  <p>&copy; 2025 HTML Playground</p>
+</footer>
+
+<script>
+  // Example: create shadow root for demo
+  const host = document.getElementById("shadow-host");
+  if (host) {
+    // Attach a shadow DOM to #shadow-host
+    const shadow = host.attachShadow({ mode: "open" });
+
+    // Insert content inside shadow DOM
+    shadow.innerHTML = "<p>This is in shadow DOM</p>";
+  }
+</script>
+
+</body>
+
+</html>
